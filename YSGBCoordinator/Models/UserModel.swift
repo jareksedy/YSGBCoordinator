@@ -9,11 +9,7 @@ import Foundation
 import RealmSwift
 
 class User: Object {
-    @Persisted var login: String
+    @Persisted(primaryKey: true) var login: String
     @Persisted var password: String
     @Persisted var name: String
-    
-    override static func primaryKey() -> String? {
-        return "login"
-    }
 }

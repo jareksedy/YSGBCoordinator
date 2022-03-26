@@ -213,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="950.72463768115949" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Success View Controller-->
         <scene sceneID="cx6-bz-w20">
             <objects>
-                <viewController storyboardIdentifier="SuccessVC" id="yYn-Tc-nPA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessVC" id="yYn-Tc-nPA" customClass="SuccessViewController" customModule="YSGBCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fTc-ix-fkb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

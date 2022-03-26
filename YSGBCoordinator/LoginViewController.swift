@@ -26,14 +26,11 @@ class LoginViewController: UIViewController {
     
     private func authenticated(login: String, password: String) -> Bool {
         let user = realm.object(ofType: User.self, forPrimaryKey: login)
-        
         guard let user = user else {
             return false
         }
         
-        if user.password == password { return true }
-        
-        return false
+        if user.password == password { return true } else { return false }
     }
     
     private func setupGestures() {
@@ -80,6 +77,8 @@ class LoginViewController: UIViewController {
         guard let login = loginTextField.text, let password = passwordTextField.text else { return }
         guard login != "", password != "" else { return }
         
+        print(login, password, authenticated(login: login, password: password))
+        
         if authenticated(login: login, password: password) {
             self.delegate?.navigateToSuccess()
         } else {
@@ -88,12 +87,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
+        self.delegate?.navigateToRegister()
     }
     
     // MARK: -- Lifecycle.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         setupGestures()
         registerNotifications()
     }

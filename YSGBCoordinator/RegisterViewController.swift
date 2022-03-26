@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 public protocol RegisterViewControllerDelegate: AnyObject {
     func navigateToLogin()
@@ -21,6 +22,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     public weak var delegate: RegisterViewControllerDelegate?
+    let realm: Realm = try! Realm()
+    
+    private func writeToDB(user: User) {
+        try! realm.write {
+            realm.add(user)
+        }
+    }
     
     private func setupGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -63,6 +71,26 @@ class RegisterViewController: UIViewController {
     
     // MARK: -- Actions.
     @IBAction func registerButtonTapped(_ sender: Any) {
+        guard let name = nameTextField.text,
+              let login = loginTextField.text,
+              let password = passwordTextField.text,
+              let passAgain = passwordAgainTextField.text
+        else { return }
+        
+        guard name != "", login != "", password != "", passAgain != "" else { return }
+        
+        guard password == passAgain else { return }
+        
+        let user = User()
+        
+        user.name = name
+        user.login = login
+        user.password = password
+        
+        writeToDB(user: user)
+        
+        self.delegate?.navigateToLogin()
+        
     }
     
     // MARK: -- Lifecycle.

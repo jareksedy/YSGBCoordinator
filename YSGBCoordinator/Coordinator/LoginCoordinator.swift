@@ -24,10 +24,8 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginViewControllerDelegate {
     func navigateToSuccess() {
-        let registerCoordinator = RegisterCoordinator(navigationController: navigationController)
-        registerCoordinator.delegate = self
-        childCoordinators.append(registerCoordinator)
-        registerCoordinator.start()
+        let successViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SuccessVC") as! SuccessViewController
+        self.navigationController.viewControllers = [successViewController]
     }
     
     func navigateToRegister() {

@@ -11,6 +11,7 @@
 		CA1AB04027EEC4B200DAA678 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB03F27EEC4B200DAA678 /* Coordinator.swift */; };
 		CA1AB04227EEC4FB00DAA678 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB04127EEC4FB00DAA678 /* LoginCoordinator.swift */; };
 		CA1AB04427EEC6BB00DAA678 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB04327EEC6BB00DAA678 /* RegisterCoordinator.swift */; };
+		CA7B78D627EEDEA300B80590 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B78D527EEDEA300B80590 /* SuccessViewController.swift */; };
 		CA7BFB9027ECD48300FDB277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFB8F27ECD48300FDB277 /* AppDelegate.swift */; };
 		CA7BFB9427ECD48300FDB277 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFB9327ECD48300FDB277 /* LoginViewController.swift */; };
 		CA7BFB9727ECD48300FDB277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7BFB9527ECD48300FDB277 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		CA1AB03F27EEC4B200DAA678 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CA1AB04127EEC4FB00DAA678 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		CA1AB04327EEC6BB00DAA678 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		CA7B78D527EEDEA300B80590 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		CA7BFB8C27ECD48300FDB277 /* YSGBCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSGBCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7BFB8F27ECD48300FDB277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA7BFB9327ECD48300FDB277 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				CA7BFB8F27ECD48300FDB277 /* AppDelegate.swift */,
 				CA7BFB9327ECD48300FDB277 /* LoginViewController.swift */,
 				CA1AB03A27EEBF4300DAA678 /* RegisterViewController.swift */,
+				CA7B78D527EEDEA300B80590 /* SuccessViewController.swift */,
 				CA1AB03E27EEC0E900DAA678 /* Coordinator */,
 				CA7BFBAC27ECDAF600FDB277 /* Models */,
 				CA7BFBA827ECD98500FDB277 /* Storyboards */,
@@ -199,6 +202,7 @@
 				CA1AB04027EEC4B200DAA678 /* Coordinator.swift in Sources */,
 				CA7BFB9027ECD48300FDB277 /* AppDelegate.swift in Sources */,
 				CA1AB04427EEC6BB00DAA678 /* RegisterCoordinator.swift in Sources */,
+				CA7B78D627EEDEA300B80590 /* SuccessViewController.swift in Sources */,
 				CA7BFBAB27ECDAF100FDB277 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
