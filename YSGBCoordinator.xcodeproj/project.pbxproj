@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1AB03B27EEBF4300DAA678 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB03A27EEBF4300DAA678 /* RegisterViewController.swift */; };
+		CA1AB04027EEC4B200DAA678 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB03F27EEC4B200DAA678 /* Coordinator.swift */; };
+		CA1AB04227EEC4FB00DAA678 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB04127EEC4FB00DAA678 /* LoginCoordinator.swift */; };
+		CA1AB04427EEC6BB00DAA678 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB04327EEC6BB00DAA678 /* RegisterCoordinator.swift */; };
+		CA7B78D627EEDEA300B80590 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B78D527EEDEA300B80590 /* SuccessViewController.swift */; };
 		CA7BFB9027ECD48300FDB277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFB8F27ECD48300FDB277 /* AppDelegate.swift */; };
-		CA7BFB9227ECD48300FDB277 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFB9127ECD48300FDB277 /* SceneDelegate.swift */; };
-		CA7BFB9427ECD48300FDB277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFB9327ECD48300FDB277 /* ViewController.swift */; };
+		CA7BFB9427ECD48300FDB277 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFB9327ECD48300FDB277 /* LoginViewController.swift */; };
 		CA7BFB9727ECD48300FDB277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7BFB9527ECD48300FDB277 /* Main.storyboard */; };
 		CA7BFB9927ECD48600FDB277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7BFB9827ECD48600FDB277 /* Assets.xcassets */; };
 		CA7BFB9C27ECD48600FDB277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7BFB9A27ECD48600FDB277 /* LaunchScreen.storyboard */; };
+		CA7BFBA527ECD90A00FDB277 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CA7BFBA427ECD90A00FDB277 /* Realm */; };
+		CA7BFBA727ECD90A00FDB277 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA7BFBA627ECD90A00FDB277 /* RealmSwift */; };
+		CA7BFBAB27ECDAF100FDB277 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFBAA27ECDAF100FDB277 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA1AB03A27EEBF4300DAA678 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CA1AB03F27EEC4B200DAA678 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CA1AB04127EEC4FB00DAA678 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		CA1AB04327EEC6BB00DAA678 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		CA7B78D527EEDEA300B80590 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		CA7BFB8C27ECD48300FDB277 /* YSGBCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSGBCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7BFB8F27ECD48300FDB277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA7BFB9127ECD48300FDB277 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA7BFB9327ECD48300FDB277 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA7BFB9327ECD48300FDB277 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA7BFB9627ECD48300FDB277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA7BFB9827ECD48600FDB277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA7BFB9B27ECD48600FDB277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA7BFB9D27ECD48600FDB277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA7BFBAA27ECDAF100FDB277 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +43,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7BFBA727ECD90A00FDB277 /* RealmSwift in Frameworks */,
+				CA7BFBA527ECD90A00FDB277 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1AB03E27EEC0E900DAA678 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CA1AB03F27EEC4B200DAA678 /* Coordinator.swift */,
+				CA1AB04127EEC4FB00DAA678 /* LoginCoordinator.swift */,
+				CA1AB04327EEC6BB00DAA678 /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		CA7BFB8327ECD48300FDB277 = {
 			isa = PBXGroup;
 			children = (
@@ -57,14 +81,41 @@
 			isa = PBXGroup;
 			children = (
 				CA7BFB8F27ECD48300FDB277 /* AppDelegate.swift */,
-				CA7BFB9127ECD48300FDB277 /* SceneDelegate.swift */,
-				CA7BFB9327ECD48300FDB277 /* ViewController.swift */,
-				CA7BFB9527ECD48300FDB277 /* Main.storyboard */,
-				CA7BFB9827ECD48600FDB277 /* Assets.xcassets */,
-				CA7BFB9A27ECD48600FDB277 /* LaunchScreen.storyboard */,
-				CA7BFB9D27ECD48600FDB277 /* Info.plist */,
+				CA7BFB9327ECD48300FDB277 /* LoginViewController.swift */,
+				CA1AB03A27EEBF4300DAA678 /* RegisterViewController.swift */,
+				CA7B78D527EEDEA300B80590 /* SuccessViewController.swift */,
+				CA1AB03E27EEC0E900DAA678 /* Coordinator */,
+				CA7BFBAC27ECDAF600FDB277 /* Models */,
+				CA7BFBA827ECD98500FDB277 /* Storyboards */,
+				CA7BFBA927ECD99500FDB277 /* Resources */,
 			);
 			path = YSGBCoordinator;
+			sourceTree = "<group>";
+		};
+		CA7BFBA827ECD98500FDB277 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BFB9527ECD48300FDB277 /* Main.storyboard */,
+				CA7BFB9A27ECD48600FDB277 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CA7BFBA927ECD99500FDB277 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BFB9827ECD48600FDB277 /* Assets.xcassets */,
+				CA7BFB9D27ECD48600FDB277 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA7BFBAC27ECDAF600FDB277 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BFBAA27ECDAF100FDB277 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +134,10 @@
 			dependencies = (
 			);
 			name = YSGBCoordinator;
+			packageProductDependencies = (
+				CA7BFBA427ECD90A00FDB277 /* Realm */,
+				CA7BFBA627ECD90A00FDB277 /* RealmSwift */,
+			);
 			productName = YSGBCoordinator;
 			productReference = CA7BFB8C27ECD48300FDB277 /* YSGBCoordinator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +166,9 @@
 				Base,
 			);
 			mainGroup = CA7BFB8327ECD48300FDB277;
+			packageReferences = (
+				CA7BFBA327ECD90A00FDB277 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = CA7BFB8D27ECD48300FDB277 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA7BFB9427ECD48300FDB277 /* ViewController.swift in Sources */,
+				CA7BFB9427ECD48300FDB277 /* LoginViewController.swift in Sources */,
+				CA1AB03B27EEBF4300DAA678 /* RegisterViewController.swift in Sources */,
+				CA1AB04227EEC4FB00DAA678 /* LoginCoordinator.swift in Sources */,
+				CA1AB04027EEC4B200DAA678 /* Coordinator.swift in Sources */,
 				CA7BFB9027ECD48300FDB277 /* AppDelegate.swift in Sources */,
-				CA7BFB9227ECD48300FDB277 /* SceneDelegate.swift in Sources */,
+				CA1AB04427EEC6BB00DAA678 /* RegisterCoordinator.swift in Sources */,
+				CA7B78D627EEDEA300B80590 /* SuccessViewController.swift in Sources */,
+				CA7BFBAB27ECDAF100FDB277 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +352,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YSGBCoordinator/Info.plist;
+				INFOPLIST_FILE = YSGBCoordinator/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YSGBCoordinator/Info.plist;
+				INFOPLIST_FILE = YSGBCoordinator/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -360,6 +423,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA7BFBA327ECD90A00FDB277 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA7BFBA427ECD90A00FDB277 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7BFBA327ECD90A00FDB277 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		CA7BFBA627ECD90A00FDB277 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7BFBA327ECD90A00FDB277 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA7BFB8427ECD48300FDB277 /* Project object */;
 }
