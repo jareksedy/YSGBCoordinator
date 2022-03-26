@@ -23,6 +23,13 @@ class LoginCoordinator: Coordinator {
 }
 
 extension LoginCoordinator: LoginViewControllerDelegate {
+    func navigateToSuccess() {
+        let registerCoordinator = RegisterCoordinator(navigationController: navigationController)
+        registerCoordinator.delegate = self
+        childCoordinators.append(registerCoordinator)
+        registerCoordinator.start()
+    }
+    
     func navigateToRegister() {
         let registerCoordinator = RegisterCoordinator(navigationController: navigationController)
         registerCoordinator.delegate = self

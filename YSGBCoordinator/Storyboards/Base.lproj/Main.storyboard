@@ -45,7 +45,7 @@
                                                     <constraint firstAttribute="height" constant="65" id="KJa-77-DWs"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CU4-Mi-CLW">
                                                 <rect key="frame" x="25" y="329" width="364" height="65"/>
@@ -154,7 +154,7 @@
                                                     <constraint firstAttribute="height" constant="65" id="HcT-dM-ore"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите пароль повторно" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SvP-c8-S87">
                                                 <rect key="frame" x="25" y="404" width="364" height="65"/>
@@ -162,7 +162,7 @@
                                                     <constraint firstAttribute="height" constant="65" id="neh-FL-JEx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua3-hO-qi7">
                                                 <rect key="frame" x="25" y="479" width="364" height="65"/>
@@ -216,7 +216,7 @@
         <!--View Controller-->
         <scene sceneID="cx6-bz-w20">
             <objects>
-                <viewController id="yYn-Tc-nPA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessVC" id="yYn-Tc-nPA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fTc-ix-fkb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
