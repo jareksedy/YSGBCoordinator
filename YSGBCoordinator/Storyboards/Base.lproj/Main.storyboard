@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="YEc-wB-0gn">
             <objects>
-                <viewController id="6Qy-tD-gmj" sceneMemberID="viewController">
+                <viewController id="6Qy-tD-gmj" customClass="RegisterViewController" customModule="YSGBCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gt9-qi-FRF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +174,9 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="-50" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Зарегистрироваться"/>
+                                                <connections>
+                                                    <action selector="registerButtonTapped:" destination="6Qy-tD-gmj" eventType="touchUpInside" id="qWc-Af-9Me"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="25" left="25" bottom="0.0" right="25"/>
@@ -197,6 +200,14 @@
                             <constraint firstItem="vrB-gd-VgN" firstAttribute="trailing" secondItem="tgF-Zp-Yb2" secondAttribute="trailing" id="y3q-P0-noj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="UaW-4w-foC" id="VN0-gr-ZdQ"/>
+                        <outlet property="nameTextField" destination="B7a-y0-odW" id="D09-OA-K17"/>
+                        <outlet property="passwordAgainTextField" destination="SvP-c8-S87" id="8hU-S1-JBN"/>
+                        <outlet property="passwordTextField" destination="gkD-cc-ZYA" id="5It-k3-5j9"/>
+                        <outlet property="registerButton" destination="Ua3-hO-qi7" id="tdR-cn-hoA"/>
+                        <outlet property="scrollView" destination="vrB-gd-VgN" id="TXy-qV-92X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ht3-u4-Q8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
