@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="YSGBCoordinator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="YSGBCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
         <!--Register View Controller-->
         <scene sceneID="YEc-wB-0gn">
             <objects>
-                <viewController id="6Qy-tD-gmj" customClass="RegisterViewController" customModule="YSGBCoordinator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" id="6Qy-tD-gmj" customClass="RegisterViewController" customModule="YSGBCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gt9-qi-FRF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,6 +212,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ht3-u4-Q8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="950.72463768115949" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cx6-bz-w20">
+            <objects>
+                <viewController id="yYn-Tc-nPA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fTc-ix-fkb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы успешно вошли" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8w-Vq-F8Y">
+                                <rect key="frame" x="103" y="398" width="208" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="icI-0x-H0V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MG4-LY-nPC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U8w-Vq-F8Y" firstAttribute="centerY" secondItem="fTc-ix-fkb" secondAttribute="centerY" id="2Ac-oB-Obt"/>
+                            <constraint firstItem="U8w-Vq-F8Y" firstAttribute="centerX" secondItem="fTc-ix-fkb" secondAttribute="centerX" id="7TR-M8-RwO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7D-D4-t7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="138"/>
         </scene>
     </scenes>
     <resources>

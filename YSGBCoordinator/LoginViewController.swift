@@ -7,6 +7,10 @@
 
 import UIKit
 
+public protocol LoginViewControllerDelegate: AnyObject {
+    func navigateToRegister()
+}
+
 class LoginViewController: UIViewController {
     // MARK: -- Outlets.
     @IBOutlet weak var scrollView: UIScrollView!
@@ -14,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
+    
+    public weak var delegate: LoginViewControllerDelegate?
     
     private func setupGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -56,6 +62,7 @@ class LoginViewController: UIViewController {
     
     // MARK: -- Actions.
     @IBAction func loginButtonTapped(_ sender: Any) {
+        self.delegate?.navigateToRegister()
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
