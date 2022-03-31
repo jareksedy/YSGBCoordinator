@@ -33,6 +33,10 @@ class LoginViewController: UIViewController {
         if user.password == password { return true } else { return false }
     }
     
+    private func setupUI() {
+        loginTextField.autocorrectionType = .no
+    }
+    
     private func setupGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
             view.addGestureRecognizer(tap)
@@ -94,6 +98,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
+        setupUI()
         setupGestures()
         registerNotifications()
     }
