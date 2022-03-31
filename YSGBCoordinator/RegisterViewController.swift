@@ -30,6 +30,11 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    private func setupUI() {
+        loginTextField.autocorrectionType = .no
+        nameTextField.autocorrectionType = .no
+    }
+    
     private func setupGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
             view.addGestureRecognizer(tap)
@@ -97,6 +102,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         setupGestures()
         registerNotifications()
     }
