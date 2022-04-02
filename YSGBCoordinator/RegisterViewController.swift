@@ -7,6 +7,8 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 
 public protocol RegisterViewControllerDelegate: AnyObject {
     func navigateToLogin()
@@ -23,6 +25,7 @@ class RegisterViewController: UIViewController {
     
     public weak var delegate: RegisterViewControllerDelegate?
     let realm: Realm = try! Realm()
+    let disposeBag = DisposeBag()
     
     private func writeToDB(user: User) {
         try! realm.write {
@@ -33,6 +36,41 @@ class RegisterViewController: UIViewController {
     private func setupUI() {
         loginTextField.autocorrectionType = .no
         nameTextField.autocorrectionType = .no
+    }
+    
+    private func setupRx() {
+        let isLoginValid = loginTextField.rx.text.orEmpty
+            .map { $0.count >= 1 }
+            .share(replay: 1)
+        
+        let isPasswordValid = passwordTextField.rx.text.orEmpty
+            .map { $0.count >= 1 }
+            .share(replay: 1)
+        
+        let isPasswordAgainValid = passwordAgainTextField.rx.text.orEmpty
+            .map { $0.count >= 1 }
+            .share(replay: 1)
+        
+        let isNameValid = nameTextField.rx.text.orEmpty
+            .map { $0.count >= 1 }
+            .share(replay: 1)
+        
+        let doPasswordsMatch = Observable.combineLatest(passwordTextField.rx.text, passwordAgainTextField.rx.text) { (password, passwordAgain) in
+            return password == passwordAgain
+        }
+        
+        let isEverythingValid = Observable.combineLatest(isLoginValid, isPasswordValid, isPasswordAgainValid, isNameValid, doPasswordsMatch) { (login, password, passwordAgain, name, passwordsMatch) in
+            return login && password && passwordAgain && name && passwordsMatch
+        }
+        
+        isEverythingValid
+            .bind(to: registerButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        isEverythingValid
+            .map { $0 ? 1.0 : 0.5 }
+            .bind(to: registerButton.rx.alpha)
+            .disposed(by: disposeBag)
     }
     
     private func setupGestures() {
@@ -78,13 +116,11 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButtonTapped(_ sender: Any) {
         guard let name = nameTextField.text,
               let login = loginTextField.text,
-              let password = passwordTextField.text,
-              let passAgain = passwordAgainTextField.text
+              let password = passwordTextField.text
         else { return }
         
-        guard name != "", login != "", password != "", passAgain != "" else { return }
-        
-        guard password == passAgain else { return }
+//        guard name != "", login != "", password != "", passAgain != "" else { return }
+//        guard password == passAgain else { return }
         
         let user = User()
         
@@ -103,6 +139,8 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupRx()
+        
         setupGestures()
         registerNotifications()
     }

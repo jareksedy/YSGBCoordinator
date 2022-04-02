@@ -7,6 +7,8 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 
 public protocol LoginViewControllerDelegate: AnyObject {
     func navigateToRegister()
@@ -23,6 +25,7 @@ class LoginViewController: UIViewController {
     
     public weak var delegate: LoginViewControllerDelegate?
     let realm: Realm = try! Realm()
+    let disposeBag = DisposeBag()
     
     private func authenticated(login: String, password: String) -> Bool {
         let user = realm.object(ofType: User.self, forPrimaryKey: login)
@@ -35,6 +38,29 @@ class LoginViewController: UIViewController {
     
     private func setupUI() {
         loginTextField.autocorrectionType = .no
+    }
+    
+    private func setupRx() {
+        let isLoginValid = loginTextField.rx.text.orEmpty
+            .map { $0.count >= 1 }
+            .share(replay: 1)
+        
+        let isPasswordValid = passwordTextField.rx.text.orEmpty
+            .map { $0.count >= 1 }
+            .share(replay: 1)
+        
+        let isEverythingValid = Observable.combineLatest(isLoginValid, isPasswordValid) { (login, password) in
+            return login && password
+        }
+        
+        isEverythingValid
+            .bind(to: loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        isEverythingValid
+            .map { $0 ? 1.0 : 0.5 }
+            .bind(to: loginButton.rx.alpha)
+            .disposed(by: disposeBag)
     }
     
     private func setupGestures() {
@@ -79,9 +105,6 @@ class LoginViewController: UIViewController {
     // MARK: -- Actions.
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let login = loginTextField.text, let password = passwordTextField.text else { return }
-        guard login != "", password != "" else { return }
-        
-        print(login, password, authenticated(login: login, password: password))
         
         if authenticated(login: login, password: password) {
             self.delegate?.navigateToSuccess()
@@ -97,8 +120,11 @@ class LoginViewController: UIViewController {
     // MARK: -- Lifecycle.
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         setupUI()
+        setupRx()
+        
         setupGestures()
         registerNotifications()
     }
