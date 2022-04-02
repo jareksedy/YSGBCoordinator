@@ -105,8 +105,6 @@ class LoginViewController: UIViewController {
     // MARK: -- Actions.
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let login = loginTextField.text, let password = passwordTextField.text else { return }
-//        guard login != "", password != "" else { return }
-//        print(login, password, authenticated(login: login, password: password))
         
         if authenticated(login: login, password: password) {
             self.delegate?.navigateToSuccess()
