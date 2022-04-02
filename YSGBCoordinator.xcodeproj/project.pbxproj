@@ -20,6 +20,8 @@
 		CA7BFBA527ECD90A00FDB277 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CA7BFBA427ECD90A00FDB277 /* Realm */; };
 		CA7BFBA727ECD90A00FDB277 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA7BFBA627ECD90A00FDB277 /* RealmSwift */; };
 		CA7BFBAB27ECDAF100FDB277 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BFBAA27ECDAF100FDB277 /* UserModel.swift */; };
+		CA91ACA727F80ECD00C73690 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CA91ACA627F80ECD00C73690 /* RxCocoa */; };
+		CA91ACA927F80ECD00C73690 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA91ACA827F80ECD00C73690 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA91ACA727F80ECD00C73690 /* RxCocoa in Frameworks */,
 				CA7BFBA727ECD90A00FDB277 /* RealmSwift in Frameworks */,
+				CA91ACA927F80ECD00C73690 /* RxSwift in Frameworks */,
 				CA7BFBA527ECD90A00FDB277 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +141,8 @@
 			packageProductDependencies = (
 				CA7BFBA427ECD90A00FDB277 /* Realm */,
 				CA7BFBA627ECD90A00FDB277 /* RealmSwift */,
+				CA91ACA627F80ECD00C73690 /* RxCocoa */,
+				CA91ACA827F80ECD00C73690 /* RxSwift */,
 			);
 			productName = YSGBCoordinator;
 			productReference = CA7BFB8C27ECD48300FDB277 /* YSGBCoordinator.app */;
@@ -168,6 +174,7 @@
 			mainGroup = CA7BFB8327ECD48300FDB277;
 			packageReferences = (
 				CA7BFBA327ECD90A00FDB277 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				CA91ACA527F80ECD00C73690 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = CA7BFB8D27ECD48300FDB277 /* Products */;
 			projectDirPath = "";
@@ -433,6 +440,14 @@
 				minimumVersion = 10.19.0;
 			};
 		};
+		CA91ACA527F80ECD00C73690 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -445,6 +460,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA7BFBA327ECD90A00FDB277 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		CA91ACA627F80ECD00C73690 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA91ACA527F80ECD00C73690 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CA91ACA827F80ECD00C73690 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA91ACA527F80ECD00C73690 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
