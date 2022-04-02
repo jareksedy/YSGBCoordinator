@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
             .disposed(by: disposeBag)
         
         isEverythingValid
-            .map { $0 ? 1.0 : 0.25 }
+            .map { $0 ? 1.0 : 0.5 }
             .bind(to: loginButton.rx.alpha)
             .disposed(by: disposeBag)
     }
