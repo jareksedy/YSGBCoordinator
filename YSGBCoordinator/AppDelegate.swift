@@ -65,6 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginCoordinator?.start()
         
         window?.makeKeyAndVisible()
+        
+        
         return true
     }
     
