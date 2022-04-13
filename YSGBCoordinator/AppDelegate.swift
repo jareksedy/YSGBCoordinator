@@ -57,7 +57,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appSwitcherView?.removeFromSuperview()
     }
     
+    func notifyUser() {
+        let content = notifier?.makeNotificationContent(title: "Вернись в приложение!",
+                                                        subtitle: "Вернись в приложение, кому сказано!",
+                                                        body: "Вернись в приложение, будь человеком!",
+                                                        badge: nil)
+        
+        let trigger = notifier?.makeIntervalNotificatioTrigger(timeInterval: 10, repeats: false)
+        
+        notifier?.notify(content: content!, trigger: trigger!)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        notifier = Notifier()
+        notifier?.requestAuthorization(options: [.alert, .sound])
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController()
@@ -67,14 +81,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-        notifier = Notifier()
-        notifier?.requestAuthorization(options: [.alert, .sound])
-        
         return true
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
         hideContent()
+        notifyUser()
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
