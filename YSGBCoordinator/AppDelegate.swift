@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var loginCoordinator: LoginCoordinator?
     var appSwitcherView: UIView?
+    var notifier: Notifier?
     
     func createScreenshotOfCurrentContext() -> UIImage? {
         UIGraphicsBeginImageContext(self.window?.screen.bounds.size ?? CGSize())
@@ -66,6 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+        notifier = Notifier()
+        notifier?.requestAuthorization(options: [.alert, .sound])
         
         return true
     }
