@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA06ADCE28073DB90032956D /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06ADCD28073DB80032956D /* Notifier.swift */; };
 		CA1AB03B27EEBF4300DAA678 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB03A27EEBF4300DAA678 /* RegisterViewController.swift */; };
 		CA1AB04027EEC4B200DAA678 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB03F27EEC4B200DAA678 /* Coordinator.swift */; };
 		CA1AB04227EEC4FB00DAA678 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB04127EEC4FB00DAA678 /* LoginCoordinator.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA06ADCD28073DB80032956D /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
 		CA1AB03A27EEBF4300DAA678 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA1AB03F27EEC4B200DAA678 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CA1AB04127EEC4FB00DAA678 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA06ADCF28073DBD0032956D /* Notifier */ = {
+			isa = PBXGroup;
+			children = (
+				CA06ADCD28073DB80032956D /* Notifier.swift */,
+			);
+			path = Notifier;
+			sourceTree = "<group>";
+		};
 		CA1AB03E27EEC0E900DAA678 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 				CA7BFB9327ECD48300FDB277 /* LoginViewController.swift */,
 				CA1AB03A27EEBF4300DAA678 /* RegisterViewController.swift */,
 				CA7B78D527EEDEA300B80590 /* SuccessViewController.swift */,
+				CA06ADCF28073DBD0032956D /* Notifier */,
 				CA1AB03E27EEC0E900DAA678 /* Coordinator */,
 				CA7BFBAC27ECDAF600FDB277 /* Models */,
 				CA7BFBA827ECD98500FDB277 /* Storyboards */,
@@ -210,6 +221,7 @@
 				CA7BFB9027ECD48300FDB277 /* AppDelegate.swift in Sources */,
 				CA1AB04427EEC6BB00DAA678 /* RegisterCoordinator.swift in Sources */,
 				CA7B78D627EEDEA300B80590 /* SuccessViewController.swift in Sources */,
+				CA06ADCE28073DB90032956D /* Notifier.swift in Sources */,
 				CA7BFBAB27ECDAF100FDB277 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
